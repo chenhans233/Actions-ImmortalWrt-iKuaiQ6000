@@ -1,12 +1,34 @@
 **English** | [中文](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
-# Actions-OpenWrt
-
 [![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
-
+# A fork of Actions-OpenWrt 
 A template for building OpenWrt with GitHub Actions
+
+(Under Construction...)
+母项目还在完善中
+
+本项目仅供个人学习，不保证固件稳定性和兼容性，不要用于生产环境。
+### 注意！
+固件只会在 _IK-Q6000_ 上测试，默认OpenWrt(ImmortalWrt)-110m分区表，请自行寻找合适的类AX6000 U-Boot，用[mtk_uartboot工具注入](https://www.openwrt.pro/post-656.html)后备份完整NAND，并刷写分区表（建议用合适的第三方不死U-Boot覆盖掉原厂的U-Boot分区）。
+
+```
+root@ImmortalWrt:~# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00100000 00020000 "BL2"
+mtd1: 00040000 00020000 "Nvram"
+mtd2: 00040000 00020000 "Bdata"
+mtd3: 00200000 00020000 "Factory"
+mtd4: 00200000 00020000 "FIP"
+mtd5: 00040000 00020000 "crash"
+mtd6: 00040000 00020000 "crash_log"
+mtd7: 06e00000 00020000 "ubi"
+```
+## 特别鸣谢
+Special thanks to...
+- [dailook对原厂IK-Q6000适配](https://github.com/dailook/lede)
+- [hanwckf的mt-wifi](https://github.com/hanwckf/immortalwrt-mt798x)
+- [padavanonly的6.6.xx patching](https://github.com/padavanonly)
+
 
 ## Usage
 
