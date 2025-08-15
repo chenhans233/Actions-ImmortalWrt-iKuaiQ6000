@@ -19,7 +19,7 @@ env:
   REPO_URL: https://github.com/chenhans233/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: ikuai-q6000-testbuild.config
+  CONFIG_FILE: ikuai-q6000-ext.config
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -38,6 +38,7 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
+        echo "This instance is running on the processor: $(lscpu | sed -nr '/Model name/ s/.*:\s*(.*) @ .*/\1/p')"
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
         sudo docker image prune --all --force
         sudo -E apt-get -qq update
