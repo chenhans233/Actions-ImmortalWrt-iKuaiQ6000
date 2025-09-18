@@ -22,6 +22,6 @@ git clone https://github.com/EasyTier/luci-app-easytier.git /opt/luci-app-easyti
 cp -R /opt/luci-app-easytier/luci-app-easytier ./package/
 
 ## Golang
-curl -O https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.25.1.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go 2>/dev/null && sudo tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz
 rm go1.25.1.linux-amd64.tar.gz
