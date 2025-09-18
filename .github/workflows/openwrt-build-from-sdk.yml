@@ -51,7 +51,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        curl -O /opt/openwrt-sdk.zip https://pub-d42e57a1841e4ab4b3644ed7f2c78ce0.r2.dev/OpenWrt_firmware_ikuai_q6000-110m-ubootmod_202508120036.zip
+        curl -o /opt/openwrt-sdk.zip https://pub-d42e57a1841e4ab4b3644ed7f2c78ce0.r2.dev/OpenWrt_firmware_ikuai_q6000-110m-ubootmod_202508120036.zip
         unzip -qq /opt/openwrt-sdk.zip -d /opt/openwrt-sdk
         mkdir /opt/tmp
         tar --zstd -xf /opt/openwrt-sdk/immortalwrt-sdk-mediatek-filogic_gcc-13.3.0_musl.Linux-x86_64.tar.zst -C /opt/tmp
