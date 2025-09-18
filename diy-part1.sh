@@ -25,3 +25,10 @@ cp -R /opt/luci-app-easytier/luci-app-easytier ./package/
 curl -O https://dl.google.com/go/go1.25.1.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go 2>/dev/null && sudo tar -C /usr/local -xzf go1.25.1.linux-amd64.tar.gz
 rm go1.25.1.linux-amd64.tar.gz
+
+## OpenClash
+curl -OL https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
+unzip -qq master.zip
+rm master.zip
+mv ./OpenClash-master/luci-app-openclash/ ./package/
+rm -rf ./OpenClash-master
