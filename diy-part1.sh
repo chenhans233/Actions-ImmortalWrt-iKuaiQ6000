@@ -30,5 +30,5 @@ rm go1.25.1.linux-amd64.tar.gz
 curl -OL https://github.com/vernesong/OpenClash/archive/refs/heads/master.zip
 unzip -qq master.zip
 rm master.zip
-mv ./OpenClash-master/luci-app-openclash/ ./package/
+cp -R ./OpenClash-master/luci-app-openclash/ ./package/
 rm -rf ./OpenClash-master
